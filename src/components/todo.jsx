@@ -16,16 +16,23 @@ export default class Todo extends Component {
     //event defination
     addTask(event){
        event.preventDefault();
-       //get the new item
-       var newItem = {
-           id: Date.now(),
-           text: this.state.text,
-           done: false
+       // check if input field is empty
+       let text_value = this.state.text;
+       if(text_value ===""){
+         alert("Please Enter any items")
+       }else{
+        //get the new item
+         var newItem = {
+             id: Date.now(),
+             text: this.state.text,
+             done: false
+         }
+         this.setState((data) => ({
+          items: data.items.concat(newItem),
+          text: ""
+        }));
        }
-       this.setState((data) => ({
-        items: data.items.concat(newItem),
-        text: ""
-      }));
+       
       
     }
     //input handle change
@@ -61,6 +68,7 @@ export default class Todo extends Component {
                       className='txt_input'
                       onChange={this.handleChange.bind(this)}
                       value={this.state.text}
+                      required
                     />
                     <button
                       className='btn btn-success ml-2 btn_add'
