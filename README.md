@@ -2,9 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to install
 
-clone the repository
-navigate to the project directory
-In the project directory, you can run: npm start
+clone the repository <br />
+navigate to the project directory <br />
+In the project directory, you can run: npm start <br />
 now development server will start automatically "https:localhost:3000"
 
 ### Important
